@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+
+        body{
+            font-family: "Quicksand", serif;
+        }
+    </style>
+    <link href="./output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="bg-slate-950 text-slate-400 flex flex-col items-center">
+    <div id="home-image" class="relative flex justify-center px-6">
+        <img src="https://images.pexels.com/photos/1809967/pexels-photo-1809967.jpeg" alt="" class="w-full mt-12 rounded-xl">
+        <div class="absolute inset-0 flex items-end justify-center px-6 my-4">
+            <span class="text-slate-00 text-4xl font-light px-4">Welcome to <span class="text-5xl text-emerald-200">PNR checker</span></span>
+        </div>
+    </div>
+    <div id="input" class="w-full px-6">
+        <input type="number" placeholder="Enter your pnr number" class="mt-8 mb-4 p-3 bg-slate-700 w-full rounded-lg">
+        <input type="button" value="Submit" class="bg-emerald-600 p-2 text-white w-full rounded-lg">
+    </div>
+    <script src="https://kit.fontawesome.com/efd35c9483.js" crossorigin="anonymous"></script>
+</body>
+</html>
