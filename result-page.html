@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+
+        body{
+            font-family: "Quicksand", serif;
+        }
+    </style>
+    <link href="./output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="bg-slate-950 text-slate-400 flex flex-col items-center">
+    <!-- If successful  -->
+    <div id="result-container" class="flex flex-col items-center py-2 w-full px-4">
+        <h2 class="text-lg font-bold">PNR status</h2>
+        <span id="pnr-number" class="mt-8 mb-4 text-2xl font-bold">
+            PNR: 489234897
+        </span>
+        <div id="train-details" class="bg-slate-800 flex pl-8 pr-4 py-4 gap-6 rounded-md w-full mx-2 justify-between">
+            <div id="train-details-text" class="flex flex-col justify-around">
+                <div id="train-number" class="text-sm"><i class="fa-solid fa-train fa-lg mr-2"></i>12202</div>
+                <div id="train-name" class="text-sm">KCVL YNRK Exp</div>
+                <div id="route-details" class="text-white text-xl">
+                    <span id="origin-station">BSR</span>
+                    <i class="fa-solid fa-arrow-right-long fa-lg"></i>
+                    <span id="destination-station">RK</span>
+                </div>
+            </div>
+            <div id="train-details-image" class="">
+                <img src="https://tse4.mm.bing.net/th?id=OIG3.Z30Ktk1SoQCehrbpuuyu&pid=ImgGn" alt="" class="h-[100px] rounded-md">
+            </div>
+        </div>
+        <!-- <div id="other-details" class="grid grid-rows-2 grid-cols-2 gap-4 mt-6">
+            fare, distance, date, class 
+            <div id="boarding-date" class="bg-slate-800 h-[100px] w-[100px]">
+                Jan 11, 2025 <br> 12:45:46 PM
+            </div>
+            <div id="distance" class="bg-slate-800 h-[100px] w-[100px]">
+                1539 km
+            </div>
+            <div id="class" class="bg-slate-800 h-[100px] w-[100px]">2A</div>
+            <div id="fare" class="bg-slate-800 h-[100px] w-[100px]">Rs. 2490</div>
+        </div> -->
+    </div>
+    <script src="https://kit.fontawesome.com/efd35c9483.js" crossorigin="anonymous"></script>
+</body>
+</html>
