@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 interactive-widget=resizes-content">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Quicksand:wght@300..700&display=swap');
 
@@ -15,6 +15,7 @@
     <title>Document</title>
 </head>
 <body class="bg-slate-950 text-slate-400 flex flex-col items-center">
+    <!-- Home page  -->
     <div id="welcome-container" class="">
         <div id="home-image" class="relative flex justify-center px-6">
             <img src="https://images.pexels.com/photos/1809967/pexels-photo-1809967.jpeg" alt="" class="w-full mt-12 rounded-xl">
@@ -34,19 +35,19 @@
         <a href="./index.html"><i class="fa-solid fa-house absolute top-2 left-2 p-4 hover:bg-slate-800"></i></a>
         
         <h2 class="text-lg font-bold">PNR status</h2>
-        <span id="pnr-number" class="mt-8 mb-4 text-2xl font-bold">
-            PNR: <span class="text-white">34832949</span>
+        <span class="mt-8 mb-4 text-2xl font-bold">
+            PNR: <span id="pnr-number" class="text-white"></span>
         </span>
         <div id="train-details" class="bg-slate-800 flex px-4 py-4 gap-6 rounded-md w-full mx-2 justify-between">
             <div id="train-details-text" class="flex flex-col justify-around">
-                <div id="train-number" class="text-sm"><i class="fa-solid fa-train fa-lg mr-2"></i>12202</div>
-                <div id="train-name" class="text-sm">KCVL YNRK Exp</div>
+                <div class="text-sm"><i class="fa-solid fa-train fa-lg mr-2"></i><span id="train-number"></span></div>
+                <div id="train-name" class="text-sm"></div>
                 <div id="route-details" class="text-white text-xl">
-                    <span id="origin-station">BSR</span>
+                    <span id="origin-station"></span>
                     <i class="fa-solid fa-arrow-right-long fa-lg mx-2"></i>
-                    <span id="destination-station">RK</span>
+                    <span id="destination-station"></span>
                 </div>
-                <div id="boarding-date" class="text-sm">Jan 11, 2025 12:45 PM</div>
+                <div id="boarding-date" class="text-sm"></div>
             </div>
             <div id="train-details-image" class="">
                 <img src="https://tse4.mm.bing.net/th?id=OIG3.Z30Ktk1SoQCehrbpuuyu&pid=ImgGn" alt="" class="h-[120px] rounded-md">
@@ -54,7 +55,7 @@
         </div>
         
         <div id="passenger-status" class="w-full mt-4">
-            <table id="passenger-list" class="table-auto w-full">
+            <table class="table-auto w-full">
                 <thead>
                   <tr>
                     <th class="border border-slate-400 py-1 px-2 bg-slate-900">Sr. no.</th>
@@ -62,17 +63,7 @@
                     <th class="border border-slate-400 py-1 px-2 bg-slate-900">Current status</th>
                   </tr>
                 </thead>
-                <tbody class="text-center">
-                  <tr>
-                    <td class="border border-slate-400 py-2 px-2">Passenger 1</td>
-                    <td class="border border-slate-400">RLWL/3</td>
-                    <td class="border border-slate-400">CNF</td>
-                  </tr>
-                  <tr>
-                    <td class="border border-slate-400 py-2 px-2">Passenger 2</td>
-                    <td class="border border-slate-400">RLWL/4</td>
-                    <td class="border border-slate-400">RAC 1</td>
-                  </tr>
+                <tbody class="text-center" id="passenger-list">
                   
                 </tbody>
               </table>
@@ -81,39 +72,42 @@
         <div id="other-details" class="grid grid-rows-2 grid-cols-2 gap-4 mt-8 mb-8 w-full">
             <!-- fare, distance, vikalp, class  -->
             
-            <div id="class" class="bg-slate-800 h-[100px] flex items-center justify-around px-4">
+            <div class="bg-slate-800 h-[100px] flex items-center justify-around px-4">
                 <i class="fa-solid fa-couch fa-2xl"></i>
                 <div class="flex flex-col items-center w-1/2">
                     <span class="text-center">Class</span>
-                    <span class="text-xl text-white">2A</span>
+                    <span id="class" class="text-xl text-white"></span>
                 </div>
             </div>
-            <div id="class" class="bg-slate-800 h-[100px] flex items-center justify-around px-4">
+            <div class="bg-slate-800 h-[100px] flex items-center justify-around px-4">
                 <i class="fa-solid fa-money-bills fa-2xl"></i>
                 <div class="flex flex-col items-center w-1/2">
                     <span class="text-center">Fare</span>
-                    <span class="text-xl text-white">&#8377; 2490</span>
+                    <span id="fare" class="text-xl text-white"></span>
                 </div>
             </div>
-            <div id="class" class="bg-slate-800 h-[100px] flex items-center justify-around px-2">
+            <div class="bg-slate-800 h-[100px] flex items-center justify-around px-2">
                 <i class="fa-solid fa-right-left fa-2xl"></i>
                 <div class="flex flex-col items-center w-1/2">
                     <span class="text-center">Vikalp status</span>
-                    <span class="text-xl text-white">No</span>
+                    <span id="vikalp" class="text-xl text-white"></span>
                 </div>
             </div>
-            <div id="class" class="bg-slate-800 h-[100px] flex items-center justify-around px-4">
+            <div class="bg-slate-800 h-[100px] flex items-center justify-around px-4">
                 <i class="fa-solid fa-route fa-2xl"></i>
                 <div class="flex flex-col items-center w-1/2">
                     <span class="text-center">Distance</span>
-                    <span class="text-xl text-white">1593 km</span>
+                    <span id="distance" class="text-xl text-white"></span>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- If fail  -->
-    <div id="error-container" class="p-4 hidden flex-col justify-center">
+    <div id="error-container" class="p-4 hidden flex-col justify-center items-center">
+        <a href="./index.html"><i class="fa-solid fa-house absolute top-2 left-2 p-4 hover:bg-slate-800"></i></a>
+        
+        <h2 class="text-lg font-bold">PNR status</h2>
         <div id="error-image">
             <img src="https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg" alt="" class="rounded-md mt-8">
         </div>
